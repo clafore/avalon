@@ -33,7 +33,7 @@ main.homepage-main {
   height: 500px;
   position: relative;
 
-  @include media-breakpoint-down(xs) {
+  @include media-breakpoint-down(sm) {
     height: 350px;
   }
 }
@@ -51,7 +51,7 @@ main.homepage-main {
   .global-search-wrapper {
     width: 400px;
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
       width: 300px;
       margin-bottom: 100px;
     }
@@ -74,7 +74,7 @@ main.homepage-main {
 
 .homepage-splash-featured-collection {
   display: flex;
-  @include media-breakpoint-down(xs) {
+  @include media-breakpoint-down(sm) {
     padding-bottom: 2rem;
     flex-direction: column;
   }

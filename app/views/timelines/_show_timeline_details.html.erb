@@ -66,10 +66,10 @@ Unless required by applicable law or agreed to in writing, software distributed
       // copy text
       document.execCommand('copy');
       copytarget.blur();
-      copyresult.attr('data-content', timeline_share_btn_result_content_default);
+      copyresult.attr('data-bs-content', timeline_share_btn_result_content_default);
     }
     catch (err) {
-      copyresult.attr('data-content', timeline_share_btn_result_content_error);
+      copyresult.attr('data-bs-content', timeline_share_btn_result_content_error);
     }
     copyresult.popover('show');
     setTimeout(function() {
@@ -83,7 +83,7 @@ Unless required by applicable law or agreed to in writing, software distributed
     '<button type="submit" onclick="new_link_cancel()" class="btn btn-primary btn-confirm">Cancel</button>' +
     '</div>'
   var popover_template = '<div class="popover" role="tooltip" style="width: 12em;">' +
-    '<div class="arrow"></div>' +
+    '<div class="popover-arrow"></div>' +
     '<h3 class="popover-header"></h3>' +
     '<div class="popover-body"></div>' +
     '</div>'

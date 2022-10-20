@@ -13,7 +13,7 @@
 # ---  END LICENSE_HEADER BLOCK  ---
 
 $ ->
-  $(document).on 'click', 'a[data-trigger="submit"]', (event) ->
+  $(document).on 'click', 'a[data-bs-trigger="submit"]', (event) ->
     $(this).closest('form').submit()
 
   initialized = false

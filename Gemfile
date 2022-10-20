@@ -9,7 +9,7 @@ gem 'sprockets', '~>3.7.2'
 gem 'sqlite3'
 
 # Assets
-gem 'bootstrap', '~> 4.0'
+gem 'bootstrap', '~> 5.2'
 gem 'coffee-rails', '~> 5.0'
 gem "font-awesome-rails"
 gem 'jquery-datatables'

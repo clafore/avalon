@@ -15,7 +15,7 @@ Unless required by applicable law or agreed to in writing, software distributed
 %>
 <% if section=='tab-content' %>
 
-    <div class="tab-pane text-left" id="link-tab">
+    <div class="tab-pane text-start" id="link-tab">
       <% if @playlist.visibility == Playlist::PUBLIC %>
       <p class="muted">Copy the link below to share this playlist</p>
       <form role="form">
@@ -37,6 +37,6 @@ Unless required by applicable law or agreed to in writing, software distributed
 
 <% elsif section=='share-tabs' %>
 
-    <li class="nav-item"><a class="nav-link active" href="#link-tab" data-toggle="tab">Share this playlist</a></li>
+    <li class="nav-item"><a class="nav-link active" href="#link-tab" data-bs-toggle="tab">Share this playlist</a></li>
 
 <% end %>

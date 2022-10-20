@@ -173,19 +173,19 @@ div.alert-danger {
 }
 
 .mobile-hidden {
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     display: none !important;
   }
 }
 
 .sm-hidden {
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     display: none !important;
   }
 }
 
 .desktop-hidden {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     display: none !important;
   }
 }
@@ -367,7 +367,7 @@ span.constraints-label {
   }
 }
 
-a[data-trigger='submit'] {
+a[data-bs-trigger='submit'] {
   text-decoration: none;
   color: $dark;
 }
@@ -450,7 +450,7 @@ a[data-trigger='submit'] {
   }
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
   #content {
     .btn {
       margin-top: 2px;
@@ -531,13 +531,13 @@ div.status-detail {
 #mediaobject_structure {
   overflow-x: auto;
 
-  @include media-breakpoint-between (md, xl) {
+  @include media-breakpoint-between (md, xxl) {
     ul {
       width: 100%;
     }
   }
 
-  @include media-breakpoint-down (sm) {
+  @include media-breakpoint-down (md) {
     ul {
       width: 730px;
     }
@@ -1116,7 +1116,7 @@ h5.card-title {
 }
 
 // Make table body scrollable in mobile devices
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   .dataTableBody {
     width: 100%;
     overflow-x: scroll;

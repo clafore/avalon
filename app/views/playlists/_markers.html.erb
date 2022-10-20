@@ -18,20 +18,20 @@ Unless required by applicable law or agreed to in writing, software distributed
   <div class="row marker_header">
     <div class="col-xs-7 col-md-8">Name</div>
     <div class="col-xs-2 col-md-1">Time</div>
-    <div class="col-xs-3 col-md-3 text-right">Actions</div>
+    <div class="col-xs-3 col-md-3 text-end">Actions</div>
   </div>
   <% @markers.sort_by(&:start_time).each do |marker| %>
     <% if can? :read, marker %>
       <% start = marker.start_time.to_f/1000 %>
-      <div class="row marker" id="marker_row_<%= marker.id %>" data-offset='<%= start %>' data-marker='<%= marker.id %>'>
+      <div class="row marker" id="marker_row_<%= marker.id %>" data-bs-offset='<%= start %>' data-marker='<%= marker.id %>'>
       	<%= form_for(marker, remote: true) do |f| %>
       	  <div class="col-xs-7 col-md-8">
-      	    <a class='marker_title' data-offset='<%= start %>'><%= marker.title %></a>
+      	    <a class='marker_title' data-bs-offset='<%= start %>'><%= marker.title %></a>
       	  </div>
       	  <div class="col-xs-2 col-md-1">
       	    <span class='marker_start_time'><%= pretty_time(marker.start_time) %></span>
       	  </div>
-      	  <div class="col-xs-3 col-md-3 text-right">
+      	  <div class="col-xs-3 col-md-3 text-end">
             <% if can? :edit, marker %>
       	      <%= button_tag name: 'edit_marker', id: "edit_marker_#{marker.id}", class:'btn btn-outline btn-sm edit_marker', type: 'button' do %>
                 <i class='fa fa-edit' title='Edit'></i> <span class='sm-hidden'>Edit</span>

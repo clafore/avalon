@@ -45,14 +45,14 @@ Unless required by applicable law or agreed to in writing, software distributed
         </div>
         <% if is_leasable %>
           <div class="col-3">
-            <label class="col-form-label" for="add_#{access_object}_begin">
-              <span class="tooltip-label" data-title="Begin Date">Begin Date</span>
+            <label class="col-form-label form-label" for="add_#{access_object}_begin">
+              <span class="tooltip-label" data-bs-title="Begin Date">Begin Date</span>
             </label>
             <%= text_field_tag "add_#{access_object}_begin", nil, placeholder: 'Begin Date (yyyy-mm-dd)', class: 'form-control date-input', disabled: input_disabled, autocomplete: 'off' %>
           </div>
           <div class="col-3">
-            <label class="col-form-label" for="add_#{access_object}_end">
-              <span class="tooltip-label" data-title="End Date">End Date</span>
+            <label class="col-form-label form-label" for="add_#{access_object}_end">
+              <span class="tooltip-label" data-bs-title="End Date">End Date</span>
             </label>
             <%= text_field_tag "add_#{access_object}_end", nil, placeholder: 'End Date (yyyy-mm-dd)', class: 'form-control date-input', disabled: input_disabled, autocomplete: 'off' %>
           </div>

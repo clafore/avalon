@@ -29,7 +29,7 @@ const CollectionListStickyUtils = ({
       <div className="col-sm-6">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="q" className="sr-only">
+            <label htmlFor="q" className="visually-hidden form-label">
               search for
             </label>
             <input
@@ -44,12 +44,12 @@ const CollectionListStickyUtils = ({
         </form>
       </div>
       <div className="col-sm-6">
-        <div className="text-right">
+        <div className="text-end">
           <span className="collection-list-view-toggle-label">View by:</span>
           <div className="btn-group btn-group-toggle">
             <label
               className={
-                'btn btn-primary sort-btn' + (sort === 'unit' ? ' active' : '')
+                'btn btn-primary sort-btn from-label' + (sort === 'unit' ? ' active' : '')
               }
               onClick={() => handleSortChange('unit')}
             >
@@ -57,7 +57,7 @@ const CollectionListStickyUtils = ({
             </label>
             <label
               className={
-                'btn btn-primary sort-btn' + (sort === 'az' ? ' active' : '')
+                'btn btn-primary sort-btn form-label' + (sort === 'az' ? ' active' : '')
               }
               onClick={() => handleSortChange('az')}
             >

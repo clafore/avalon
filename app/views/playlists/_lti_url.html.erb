@@ -15,7 +15,7 @@ Unless required by applicable law or agreed to in writing, software distributed
 %>
 <% if section=='tab-content' %>
 
-    <div class="tab-pane text-left" id="lti-tab">
+    <div class="tab-pane text-start" id="lti-tab">
       <% if @playlist.visibility == Playlist::PUBLIC %>
       <p class="muted">Copy the link below to share this playlist via LTI</p>
       <form role="form">
@@ -37,6 +37,6 @@ Unless required by applicable law or agreed to in writing, software distributed
 
 <% elsif section=='share-tabs' %>
 
-    <li><a href="#lti-tab" data-toggle="tab">LTI URL</a></li>
+    <li><a href="#lti-tab" data-bs-toggle="tab">LTI URL</a></li>
 
 <% end %>

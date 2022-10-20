@@ -19,11 +19,11 @@ Unless required by applicable law or agreed to in writing, software distributed
       <p class="muted">Copy the link below to share this resource</p>
       <form role="form">
         <div class="form-group">
-          <label for="link-object">Item</label>
+          <label for="link-object" class="form-label">Item</label>
           <input type="text" class="col-md-12 form-control" id="link-object" value="<%= share_link_for(@media_object) %>" placeholder="<%= share_link_for(@media_object) %>" onClick="this.select();" readonly="readonly">
         </div>
         <div class="form-group">
-          <label for="share-link-section">Section</label>
+          <label for="share-link-section" class="form-label">Section</label>
           <% if @currentStream.present? %>
           <input type="text" class="col-md-12 form-control" id="share-link-section" value="<%= share_link_for(@currentStream) %>" placeholder="<%= share_link_for(@currentStream) %>" onClick="this.select();" readonly="readonly">
           <% else %>
@@ -35,6 +35,6 @@ Unless required by applicable law or agreed to in writing, software distributed
 
 <% elsif section=='share-tabs' %>
 
-    <li class="nav-item"><a href="#link-tab" data-toggle="tab" class="nav-link active">Share this resource</a></li>
+    <li class="nav-item"><a href="#link-tab" data-bs-toggle="tab" class="nav-link active">Share this resource</a></li>
 
 <% end %>

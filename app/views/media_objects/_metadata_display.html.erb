@@ -15,9 +15,9 @@ Unless required by applicable law or agreed to in writing, software distributed
 %>
 <div id="metadata_header">
   <ul class="nav nav-tabs">
-    <li class="nav-item"><a href="#details-tab" data-toggle="tab" class="nav-link active">Details</a></li>
+    <li class="nav-item"><a href="#details-tab" data-bs-toggle="tab" class="nav-link active">Details</a></li>
     <% if @media_object.supplemental_files.present? || @masterFiles.any? { |section| section.supplemental_files.present? } %>
-      <li class="nav-item"><a href="#files-tab" data-toggle="tab" class="nav-link">Files</a></li>
+      <li class="nav-item"><a href="#files-tab" data-bs-toggle="tab" class="nav-link">Files</a></li>
     <% end %>
   </ul>
   <div class="tab-content">
@@ -80,7 +80,7 @@ Unless required by applicable law or agreed to in writing, software distributed
   <div class="card">
     <div class="card-header">
       <h3 class="card-title">
-        <%= link_to 'Fedora Objects', "#object_tree", :id => 'show_object_tree', role: "button", "data-toggle":"collapse", "aria-expanded": "false", "aria-controls": "object_tree" %>
+        <%= link_to 'Fedora Objects', "#object_tree", :id => 'show_object_tree', role: "button", "data-bs-toggle":"collapse", "aria-expanded": "false", "aria-controls": "object_tree" %>
       </h3>
     </div>
     <div class="card-body collapse" id="object_tree" data-src="<%=tree_media_object_path(@media_object.id)%>"></div>

@@ -16,7 +16,7 @@ $ ->
   $('.directupload').find("input:file").each (i, elem)->
     file_input = $(elem)
     form = $(file_input.parents('form:first'))
-    submit_button = form.find('input[type="submit"], *[data-trigger="submit"]')
+    submit_button = form.find('input[type="submit"], *[data-bs-trigger="submit"]')
     submit_button.on 'click', ->
       $('.directupload input:file').fileupload 'send',
         files: $('.directupload input:file').prop('files')

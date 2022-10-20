@@ -18,22 +18,22 @@ Unless required by applicable law or agreed to in writing, software distributed
         <div class="modal-content">
           <div class="modal-header">
               <h4 class='modal-title'><%= modal_title %></h4>
-              <button type="button" class="close" data-dismiss="modal">
+              <button type="button" class="close" data-bs-dismiss="modal">
                 <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
+                <span class="visually-hidden">Close</span>
               </button>
           </div>
           <div class="modal-body">
             <p>Would you like to keep all existing Special access entries on items (users, groups, IP addresses), and add the current access control settings?</p>
             <div class="form-group">
               <div class="form-check">
-                <label>
+                <label class="form-label">
                   <%= radio_button_tag :overwrite, 'false', true %>
                   Yes, add to existing Special Access entries
                 </label>
               </div>
               <div class="form-check">
-                <label>
+                <label class="form-label">
                   <%= radio_button_tag :overwrite, 'true', false %>
                   No, replace existing Special Access entries
                 </label>
@@ -41,7 +41,7 @@ Unless required by applicable law or agreed to in writing, software distributed
             </div>
           </div>
           <div class="modal-footer">
-            <a href="#" data-dismiss="modal" aria-hidden="true" class="btn btn-outline">Cancel</a>
+            <a href="#" data-bs-dismiss="modal" aria-hidden="true" class="btn btn-outline">Cancel</a>
             <%= submit_tag "Apply", name: "apply_access", class: "btn btn-primary", form: 'access_control_form' %>
           </div>
         </div>

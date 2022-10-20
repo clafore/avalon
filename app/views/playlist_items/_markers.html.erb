@@ -16,7 +16,7 @@ Unless required by applicable law or agreed to in writing, software distributed
 <div id="markers">
   <%# Alert error container %>
   <div id="marker_item_edit_alert" class="mejs-form-alert alert alert-danger" style="display: none;">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <button type="button" class="close" data-bs-dismiss="alert">&times;</button>
     <p></p>
   </div>
   <% showActions = can? :edit, @playlist_item %>
@@ -26,7 +26,7 @@ Unless required by applicable law or agreed to in writing, software distributed
         <th>Name</th>
         <th>Time</th>
         <% if showActions %>
-          <th class="text-right">Actions</th>
+          <th class="text-end">Actions</th>
         <% end %>
       </tr>
     </thead>
@@ -34,9 +34,9 @@ Unless required by applicable law or agreed to in writing, software distributed
       <% @markers.sort_by(&:start_time).each do |marker| %>
         <% if can? :read, marker %>
           <% start = marker.start_time.to_f/1000 %>
-          <tr data-offset="<%= start %>" data-marker-id="<%= marker.id %>">
+          <tr data-bs-offset="<%= start %>" data-marker-id="<%= marker.id %>">
             <td>
-              <a class="marker_title display-item" data-offset="<%= start %>"><%= marker.title %></a>
+              <a class="marker_title display-item" data-bs-offset="<%= start %>"><%= marker.title %></a>
               <input name="title_<%= marker.id %>" type="text" class="form-control edit-item" value="<%= marker.title %>">
             </td>
             <td>
@@ -44,7 +44,7 @@ Unless required by applicable law or agreed to in writing, software distributed
               <input name="offset_<%= marker.id %>" type="text" class="form-control edit-item" value="<%= pretty_time(marker.start_time) %>">
             </td>
             <% if showActions %>
-              <td class="text-right" id="popover-container-<%= marker.id %>">
+              <td class="text-end" id="popover-container-<%= marker.id %>">
                 <%# Edit button %>
                 <%= button_tag name: 'edit_marker', class:'btn btn-outline btn-sm edit_marker display-item', type: 'button' do %>
                   <i class="fa fa-edit" title="Edit"></i> <span class="sm-hidden">Edit</span>

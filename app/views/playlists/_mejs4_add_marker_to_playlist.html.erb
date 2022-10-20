@@ -14,7 +14,7 @@ Unless required by applicable law or agreed to in writing, software distributed
 ---  END LICENSE_HEADER BLOCK  ---
 %>
 <div id="add_marker_to_playlist_item_alert" class="mejs-form-alert alert" style="display:none">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <button type="button" class="close" data-bs-dismiss="alert">&times;</button>
 </div>
 <div id="add_marker_to_playlist_item" class="mejs-form-wrapper" style="display:none" >
   <h3>Add marker to playlist item:</h3>
@@ -33,7 +33,7 @@ Unless required by applicable law or agreed to in writing, software distributed
       </div>
     </div>
   </div>
-  <div class="form-group text-right">
+  <div class="form-group text-end">
     <%= button_tag("Add", type:"button", id:"add_marker_submit", class:"btn btn-primary add_marker_submit") %>
     <%= button_tag("Cancel", type:"button", id:"add_marker_cancel", class:"btn btn-outline add_marker_cancel") %>
   </div>

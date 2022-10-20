@@ -18,7 +18,7 @@ Unless required by applicable law or agreed to in writing, software distributed
   <div class="modal-content">
     <div class="modal-header">
       <h4 class="modal-title">Add <%= scope=='master_file'? 'Section' : 'Item'%> to Playlist</h4>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>
     </div>
@@ -27,15 +27,15 @@ Unless required by applicable law or agreed to in writing, software distributed
         accept-charset="UTF-8" data-remote="true" method="post">
         <input type="hidden" name="post[masterfile_id]" value="<%= masterfile_id %>" />
         <div class="form-group">
-          <label for="playlist">Playlist</label>
+          <label for="playlist" class="form-label">Playlist</label>
           <% @add_playlist_item_playlists = Playlist.where(user: current_user).sort_by(&:title) %>
           <%= collection_select(:post, :playlist_id, @add_playlist_item_playlists, :id, :title, {}, {id: 'add-to-playlist-playlist-id', class: "form-control form-model", style: 'width:100%;'}) %>
         </div>
         <div class="form-group">
-          <label>Playlist Item Scope</label>
+          <label class="form-label">Playlist Item Scope</label>
 
           <div class="form-check">
-            <label>
+            <label class="form-label">
               <input type="radio" value="section" name="post[playlistitem_scope]" id="playlistitem_scope_section"
                 checked="true">
               Create single item for
@@ -43,7 +43,7 @@ Unless required by applicable law or agreed to in writing, software distributed
             </label>
           </div>
           <div class="form-check">
-            <label>
+            <label class="form-label">
               <input type="radio" value="structure" name="post[playlistitem_scope]" id="playlistitem_scope_structure">
               Create multiple items from subsections, if available
             </label>
@@ -53,7 +53,7 @@ Unless required by applicable law or agreed to in writing, software distributed
       </form>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-outline" data-bs-dismiss="modal">Close</button>
       <input type="submit" form="add_to_playlist_form" name="commit" value="Add to Playlist" class="btn btn-primary"
         id="playlistitem_submit">
     </div>

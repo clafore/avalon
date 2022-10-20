@@ -136,17 +136,17 @@ Object.assign(MediaElementPlayer.prototype, {
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title">Update Poster Image</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             </div>
             <div class="modal-body text-center">
               <p><img class="img-polaroid img-fluid"></p>
               <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 This will update the poster and thumbnail images for this video.
               </div>
             </div>
             <div class="modal-footer">
-              <button data-dismiss="modal" class="btn btn-outline">Cancel</button>
+              <button data-bs-dismiss="modal" class="btn btn-outline">Cancel</button>
               <button id="create-thumbnail-submit-button" class="btn btn-primary">Update Poster Image</button>
             </div>
           </div>

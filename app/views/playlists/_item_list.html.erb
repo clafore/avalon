@@ -37,7 +37,7 @@ Unless required by applicable law or agreed to in writing, software distributed
   <div class="playlist-autoplay-wrapper col-sm-6">
     <span class="playlist-autoplay-label">Autoplay</span>
     <input type="checkbox" <%= 'checked' if params['autoadvance'].nil? or params['autoadvance']=='true' %>
-      data-toggle="toggle" data-size="mini" name="autoadvance" />
+      data-bs-toggle="toggle" data-size="mini" name="autoadvance" />
   </div>
   <%= render 'share' if will_partial_list_render? :share %>
 </div>

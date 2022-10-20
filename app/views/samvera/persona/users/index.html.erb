@@ -27,9 +27,9 @@ Unless required by applicable law or agreed to in writing, software distributed
       <%= render "devise/shared/error_messages", resource: @user %>
 
       <% @user.class.invite_key_fields.each do |field| -%>
-        <div class="form-group mr-2">
-          <%= f.label field, t('.invite_users'), for: field, class: 'col-form-label font-weight-bold required' %>
-          <%= f.text_field field, class: 'form-control ml-2 required' %>
+        <div class="form-group me-2">
+          <%= f.label field, t('.invite_users'), for: field, class: 'col-form-label fw-bold required' %>
+          <%= f.text_field field, class: 'form-control ms-2 required' %>
         </div>
       <% end -%>
 
@@ -51,7 +51,7 @@ Unless required by applicable law or agreed to in writing, software distributed
         <% if User.column_names.include? 'provider' %>
           <th><%= t('.auth_label') %></th>
         <% end %>
-        <th class="text-right" data-orderable="false"><%= t('.action_label') %></th>
+        <th class="text-end" data-orderable="false"><%= t('.action_label') %></th>
       </tr>
     </thead>
     <tbody>
@@ -86,7 +86,7 @@ Unless required by applicable law or agreed to in writing, software distributed
         null,
         null,
         null,
-        { className: "text-right"}
+        { className: "text-end"}
       ]
     }).on('draw', function () {
       window.apply_button_confirmation()

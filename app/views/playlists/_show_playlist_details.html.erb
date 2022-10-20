@@ -23,7 +23,7 @@ Unless required by applicable law or agreed to in writing, software distributed
 
   <div class="playlist-details-headline-wrapper">
     <h2 class="headline" style="display:inline-block"><%= t("playlist.details") %></h2>
-    <a id="playlist_edit_button" data-toggle="collapse" data-target="#playlist_edit_div, #playlist_view_div"
+    <a id="playlist_edit_button" data-bs-toggle="collapse" data-bs-target="#playlist_edit_div, #playlist_view_div"
     class="fa fa-edit btn btn-lg"></a>
   </div>
 
@@ -102,9 +102,9 @@ Unless required by applicable law or agreed to in writing, software distributed
         // copy text
         document.execCommand('copy');
         copytarget.blur();
-        $('#playlist-share-btn-result').attr('data-content', playlist_share_btn_result_content_default);
+        $('#playlist-share-btn-result').attr('data-bs-content', playlist_share_btn_result_content_default);
       } catch (err) {
-        $('#playlist-share-btn-result').attr('data-content', playlist_share_btn_result_content_error);
+        $('#playlist-share-btn-result').attr('data-bs-content', playlist_share_btn_result_content_error);
       }
       $('#playlist-share-btn-result').popover('show');
       setTimeout(function () {
@@ -118,7 +118,7 @@ Unless required by applicable law or agreed to in writing, software distributed
       '<button type="submit" onclick="new_link_cancel()" class="btn btn-primary btn-confirm">Cancel</button>' +
       '</div>'
     var popover_template = '<div class="popover" role="tooltip" style="width: 12em;">' +
-      '<div class="arrow"></div>' +
+      '<div class="popover-arrow"></div>' +
       '<h3 class="popover-header"></h3>' +
       '<div class="popover-body"></div>' +
       '</div>'
