@@ -18,7 +18,8 @@ gem 'jquery-ui-rails'
 gem 'react-rails'
 #gem 'sass-rails', '>= 6'
 # Use the last known good version of sass
-gem 'sass', '3.4.22'
+# Using Dart Sass implementation for rails
+gem 'dartsass-rails', '0.4.0'
 gem 'sprockets-es6'
 gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
 gem 'uglifier', '>= 1.3.0'
@@ -72,7 +73,7 @@ gem "omniauth-saml", "~> 2.0"
 # Media Access & Transcoding
 gem 'active_encode', '~> 0.8.2'
 gem 'audio_waveform-ruby', '~> 1.0.7', require: 'audio_waveform'
-gem 'browse-everything', git: "https://github.com/avalonmediasystem/browse-everything.git", branch: 'v1.2-avalon'
+gem 'browse-everything', git: "https://github.com/clafore/browse-everything.git", branch: 'v1.2-avalon-bootstrap5'
 gem 'fastimage'
 gem 'media_element_add_to_playlist', git: 'https://github.com/avalonmediasystem/media-element-add-to-playlist.git', tag: 'avalon-r6.5'
 gem 'mediainfo', git: "https://github.com/avalonmediasystem/mediainfo.git", branch: 'avalon_fixes'

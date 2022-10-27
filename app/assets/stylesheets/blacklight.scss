@@ -16,6 +16,8 @@
 
 @import 'bootstrap';
 
+@import 'blacklight_bootstrap_shim';
+
 @import 'blacklight/blacklight';
 
 .result-thumbnail img, img.result-thumbnail {

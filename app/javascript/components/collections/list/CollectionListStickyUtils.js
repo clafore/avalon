@@ -53,7 +53,7 @@ const CollectionListStickyUtils = ({
               }
               onClick={() => handleSortChange('unit')}
             >
-              <input type="radio" value="unit" /> Unit
+              <input type="radio" value="unit" className="btn-check" /> Unit
             </label>
             <label
               className={
@@ -61,7 +61,7 @@ const CollectionListStickyUtils = ({
               }
               onClick={() => handleSortChange('az')}
             >
-              <input type="radio" value="az" /> A-Z
+              <input type="radio" value="az" className="btn-check" /> A-Z
             </label>
           </div>
         </div>

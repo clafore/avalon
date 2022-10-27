@@ -23,22 +23,6 @@ GIT
     avalon-workflow (0.0.3)
 
 GIT
-  remote: https://github.com/avalonmediasystem/browse-everything.git
-  revision: 38610d19d36105ca9c311e0a641fdb43697fabea
-  branch: v1.2-avalon
-  specs:
-    browse-everything (1.2.0)
-      addressable (~> 2.5)
-      aws-sdk-s3
-      dropbox_api (>= 0.1.20)
-      google-apis-drive_v3
-      googleauth (>= 0.6.6, < 2.0)
-      rails (>= 4.2, < 7.1)
-      ruby-box
-      signet (~> 0.8)
-      typhoeus
-
-GIT
   remote: https://github.com/avalonmediasystem/media-element-add-to-playlist.git
   revision: dfde0084f6c17ca16fa675086eb025440f99a02d
   tag: avalon-r6.5
@@ -70,6 +54,22 @@ GIT
     sidekiq-cron (1.2.1)
       fugit (~> 1.1)
       sidekiq (>= 4.2.1)
+
+GIT
+  remote: https://github.com/clafore/browse-everything.git
+  revision: 790e4ad12655684fa49065f38308051ac10e742b
+  branch: v1.2-avalon-bootstrap5
+  specs:
+    browse-everything (1.2.0)
+      addressable (~> 2.5)
+      aws-sdk-s3
+      dropbox_api (>= 0.1.20)
+      google-apis-drive_v3
+      googleauth (>= 0.6.6, < 2.0)
+      rails (>= 4.2, < 7.1)
+      ruby-box
+      signet (~> 0.8)
+      typhoeus
 
 GEM
   remote: https://rubygems.org/
@@ -185,7 +185,7 @@ GEM
     ast (2.4.2)
     audio_waveform-ruby (1.0.7)
       json (~> 2.3)
-    autoprefixer-rails (10.4.2.0)
+    autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
     aws-eventstream (1.2.0)
     aws-partitions (1.602.0)
@@ -258,9 +258,9 @@ GEM
       deprecation (~> 1.0)
     bootsnap (1.10.3)
       msgpack (~> 1.2)
-    bootstrap (4.6.1)
+    bootstrap (5.2.2)
       autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.14.3, < 2)
+      popper_js (>= 2.11.6, < 3)
       sassc-rails (>= 2.0.0)
     bootstrap-toggle-rails (2.2.1.0)
     bootstrap_form (5.0.0)
@@ -321,6 +321,8 @@ GEM
     crass (1.0.6)
     daemons (1.4.1)
     dalli (3.2.1)
+    dartsass-rails (0.4.0)
+      railties (>= 6.0.0)
     database_cleaner (2.0.1)
       database_cleaner-active_record (~> 2.0.0)
     database_cleaner-active_record (2.0.1)
@@ -431,7 +433,7 @@ GEM
     globalid (1.0.0)
       activesupport (>= 5.0)
     google-analytics-rails (1.1.0)
-    google-apis-core (0.7.0)
+    google-apis-core (0.9.1)
       addressable (~> 2.5, >= 2.5.1)
       googleauth (>= 0.16.2, < 2.a)
       httpclient (>= 2.8.1, < 3.a)
@@ -440,9 +442,9 @@ GEM
       retriable (>= 2.0, < 4.a)
       rexml
       webrick
-    google-apis-drive_v3 (0.25.0)
-      google-apis-core (>= 0.7, < 2.a)
-    googleauth (1.2.0)
+    google-apis-drive_v3 (0.31.0)
+      google-apis-core (>= 0.9.1, < 2.a)
+    googleauth (1.3.0)
       faraday (>= 0.17.3, < 3.a)
       jwt (>= 1.4, < 3.0)
       memoist (~> 0.16)
@@ -511,7 +513,7 @@ GEM
       multi_json (~> 1.14)
       rack (~> 2.0)
       rdf (~> 3.1)
-    jwt (2.4.1)
+    jwt (2.5.0)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -589,12 +591,12 @@ GEM
       i18n
       nokogiri
     oauth (0.5.8)
-    oauth2 (1.4.10)
+    oauth2 (1.4.11)
       faraday (>= 0.17.3, < 3.0)
       jwt (>= 1.0, < 3.0)
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
-      rack (>= 1.2, < 3)
+      rack (>= 1.2, < 4)
     okcomputer (1.18.4)
     om (3.2.0)
       activemodel (>= 5.1, < 7)
@@ -620,7 +622,7 @@ GEM
     parser (3.1.0.0)
       ast (~> 2.4.1)
     pg (1.3.2)
-    popper_js (1.16.0)
+    popper_js (2.11.6)
     pretender (0.4.0)
       actionpack (>= 5.2)
     pry (0.13.1)
@@ -818,7 +820,6 @@ GEM
       paranoia (~> 2.2)
       pretender
       rails (>= 5.2.4.3, < 6.1)
-    sass (3.4.22)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -980,7 +981,7 @@ DEPENDENCIES
   blacklight (~> 7.25)
   blacklight-access_controls (>= 6.0.1)
   bootsnap
-  bootstrap (~> 4.0)
+  bootstrap (~> 5.2)
   bootstrap-toggle-rails
   bootstrap_form
   browse-everything!
@@ -996,6 +997,7 @@ DEPENDENCIES
   codeclimate-test-reporter
   coffee-rails (~> 5.0)
   config
+  dartsass-rails (= 0.4.0)
   database_cleaner
   devise (~> 4.8)
   devise_invitable (~> 2.0)
@@ -1058,7 +1060,6 @@ DEPENDENCIES
   rspec-retry
   rspec_junit_formatter
   samvera-persona (~> 0.3)
-  sass (= 3.4.22)
   selenium-webdriver
   shoulda-matchers
   sidekiq (~> 6.2)

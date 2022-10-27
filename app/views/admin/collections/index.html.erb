@@ -21,7 +21,7 @@ Unless required by applicable law or agreed to in writing, software distributed
     <h1 class="page-title">My Collections</h1>
   </div>
   <div class="col-xs-6 collection-btn">
-    <%= button_tag("Create Collection", class: 'btn btn-primary btn-large', data: {toggle:"modal", target:"#new_collection"}) unless cannot? :create, Admin::Collection %>
+    <%= button_tag("Create Collection", class: 'btn btn-primary btn-large', data: {'bs-toggle':"modal", 'bs-target':"#new_collection"}) unless cannot? :create, Admin::Collection %>
   </div>
 </div>
 
@@ -69,7 +69,7 @@ Unless required by applicable law or agreed to in writing, software distributed
   <p>Would you like to create one?</p>
   <div class="whitespace"></div>
   <p>
-    <%= button_tag("Create Collection", class: 'btn btn-primary btn-large', data: {toggle:"modal", target:"#new_collection"}) %>
+    <%= button_tag("Create Collection", class: 'btn btn-primary btn-large', data: {'bs-toggle':"modal", 'bs-target':"#new_collection"}) %>
   </p>
   <% else %>
   <p>You'll need to be assigned to one</p>
